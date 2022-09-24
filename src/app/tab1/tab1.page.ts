@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -10,16 +11,19 @@ export class Tab1Page {
   valor1: number;
   valor2: number;
   resultado: Number;
+  maior: number;
+  conta: string;
 
-  constructor(private alertController: AlertController) { }
-
+  constructor(private alertController: AlertController) {}
+  
 
   async mostrarAlertSoma() {
     const alert = await this.alertController.create({
+      
       header: 'Resultado',
-      message: 'Valor 1:' + this.valor1 + 
-      '<br> Valor 2:' + this.valor2 +
-      '<br> Resultado: ' + (this.resultado = this.valor1 + this.valor2),
+      message: 'Valor 1:' + this.valor1 +
+        '<br> Valor 2:' + this.valor2 +
+        '<br> Resultado: ' + (this.resultado = this.valor1 + this.valor2),
       buttons: ['OK'],
     });
 
@@ -28,9 +32,9 @@ export class Tab1Page {
   async mostrarAlertSub() {
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: 'Valor 1: ' + this.valor1 + 
-      '<br> Valor 2: ' + this.valor2 + 
-      '<br> Resultado: ' + (this.resultado = this.valor1 - this.valor2),
+      message: 'Valor 1: ' + this.valor1 +
+        '<br> Valor 2: ' + this.valor2 +
+        '<br> Resultado: ' + (this.resultado = this.valor1 - this.valor2),
       buttons: ['OK'],
     });
 
@@ -39,9 +43,9 @@ export class Tab1Page {
   async mostrarAlertMult() {
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: 'Valor 1: ' + this.valor1 + 
-      '<br> Valor 2: ' + this.valor2 + 
-      '<br> Resultado: ' + (this.resultado = this.valor1 * this.valor2),
+      message: 'Valor 1: ' + this.valor1 +
+        '<br> Valor 2: ' + this.valor2 +
+        '<br> Resultado: ' + (this.resultado = this.valor1 * this.valor2),
       buttons: ['OK'],
     });
 
@@ -50,9 +54,9 @@ export class Tab1Page {
   async mostrarAlertDiv() {
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: 'Valor 1: ' + this.valor1 + 
-      '<br> Valor 2: ' + this.valor2 + 
-      '<br> Resultado: ' + (this.resultado = this.valor1 / this.valor2),
+      message: 'Valor 1: ' + this.valor1 +
+        '<br> Valor 2: ' + this.valor2 +
+        '<br> Resultado: ' + (this.resultado = this.valor1 / this.valor2),
       buttons: ['OK'],
     });
 
@@ -61,7 +65,7 @@ export class Tab1Page {
   async mostrarAlertMaior() {
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: '',
+      message: 'Maior: ' + this.maior,
       buttons: ['OK'],
     });
 
