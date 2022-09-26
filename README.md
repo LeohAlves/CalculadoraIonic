@@ -1,7 +1,7 @@
 # CalculadoraIonic
 Calculadora simples feita em Ionic.
 Ela contêm as seguintes operações: 
-= Soma
+- Soma
 - Subtração
 - Multiplicação
 - Divisão
