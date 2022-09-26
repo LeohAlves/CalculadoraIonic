@@ -1,5 +1,4 @@
-# CalculadoraIonic
-<br>
+# Calculadora Ionic
 Calculadora simples feita em Ionic.
 Ela contêm as seguintes operações: 
 - Soma
