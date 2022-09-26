@@ -16,57 +16,59 @@ export class Tab1Page {
   constructor(private alertController: AlertController) { }
 
   limpar(){
-    this.valor1 = 0;
-    this.valor2 = 0;
-    this.resultado = 0;
+    this.valor1 = null;
+    this.valor2 = null;
+    this.resultado = null;
+    this.conta = '';
   }
 
   async mostrarAlertSoma() {
-    this.resultado = this.valor1 + this.valor2
-    this.conta = 'soma';
+    this.resultado = this.valor1 + this.valor2;
+    this.conta = 'Soma';
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: `<p>Valor 1: ${this.valor1}</p>
-                <p>Valor 2: ${this.valor2}</p>
-                <p>Resultado : ${this.resultado} </p>`,
+      message: `<p> <strong>Valor 1: </strong> ${this.valor1}</p>
+                <p><strong>Valor 2: </strong> ${this.valor2}</p>
+                <p> <strong>Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 
     await alert.present();
   }
   async mostrarAlertSub() {
-    this.conta = 'Subtraçao';
-    this.resultado = this.valor1 - this.valor2
+    this.conta = 'Subtração';
+    this.resultado = this.valor1 - this.valor2;
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message: `<p>Valor 1: ${this.valor1}</p>
-                <p>Valor 2: ${this.valor2}</p>
-                <p>Resultado : ${this.resultado} </p>`,
+      message: `<p> <strong> Valor 1: </strong> ${this.valor1}</p>
+                <p><strong> Valor 2: </strong>  ${this.valor2}</p>
+                <p><strong> Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 
     await alert.present();
   }
   async mostrarAlertMult() {
-    this.conta = 'Multiplicaçao';
-    this.resultado = this.valor1 * this.valor2
+    this.conta = 'Multiplicação';
+    this.resultado = this.valor1 * this.valor2;
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message:  `<p>Valor 1: ${this.valor1}</p>
-                  <p>Valor 2: ${this.valor2}</p>
-                  <p>Resultado : ${this.resultado} </p>`,
+      message:  `<p> <strong>Valor 1: </strong> ${this.valor1}</p>
+                 <p><strong>Valor 2: </strong> ${this.valor2}</p>
+                 <p> <strong>Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 
     await alert.present();
   }
   async mostrarAlertDiv() {
-    this.resultado = this.valor1 / this.valor2
+    this.resultado = this.valor1 / this.valor2;
+    this.conta = 'Divisão';
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message:  `<p>Valor 1: ${this.valor1}</p>
-                 <p>Valor 2: ${this.valor2}</p>
-                 <p>Resultado : ${this.resultado} </p>`,
+      message:  `<p> <strong>Valor 1: </strong> ${this.valor1}</p>
+                 <p><strong>Valor 2: </strong> ${this.valor2}</p>
+                 <p> <strong>Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 
@@ -77,22 +79,22 @@ export class Tab1Page {
     this.resultado = this.valor1 > this.valor2 ?this.valor1 : this.valor2; 
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message:  `<p>Valor 1: ${this.valor1}</p>
-                 <p>Valor 2: ${this.valor2}</p>
-                <p>Resultado : ${this.resultado} </p>`,
+      message:  `<p> <strong>Valor 1: </strong> ${this.valor1}</p>
+                 <p><strong>Valor 2: </strong> ${this.valor2}</p>
+                 <p> <strong>Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 
     await alert.present();
   }
   async mostrarAlertMenor() {
-    this.conta = 'Menor numero';
+    this.conta = 'Menor';
     this.resultado = this.valor1 < this.valor2 ? this.valor1 : this.valor2;
     const alert = await this.alertController.create({
       header: 'Resultado',
-      message:  `<p>Valor 1: ${this.valor1}</p>
-                 <p>Valor 2: ${this.valor2}</p>
-                <p>Resultado : ${this.resultado} </p>`,
+      message:  `<p> <strong>Valor 1: </strong> ${this.valor1}</p>
+                 <p><strong>Valor 2: </strong> ${this.valor2}</p>
+                 <p> <strong>Resultado: </strong> ${this.resultado} </p>`,
       buttons: ['OK'],
     });
 

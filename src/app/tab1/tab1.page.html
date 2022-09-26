@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button (click)="limpar()" color="dark">
+      <ion-button (click)="limpar()" color="dark" name="lixeira">
         <ion-icon slot="icon-only" icon="trash-bin-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -11,11 +11,11 @@
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-label position="floating">Valor 1 </ion-label>
+    <ion-label position="floating">Número 1 </ion-label>
     <ion-input [(ngModel)] = "valor1" type="number"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Valor 2</ion-label>
+    <ion-label position="floating">Número 2</ion-label>
     <ion-input [(ngModel)] = "valor2" type="number"></ion-input>
   </ion-item>
   <ion-grid>
@@ -50,13 +50,13 @@
         <ion-button (click)="mostrarAlertMaior()" color="dark" expand="full">Maior</ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button color="dark" expand="full">Menor</ion-button>
+        <ion-button (click)="mostrarAlertMenor()" color="dark" expand="full">Menor</ion-button>
       </ion-col>
 
     </ion-row>
   </ion-grid>
 
-  <ion-input [(ngModel)] = "resultado" class="espacinho"> Resultado: </ion-input>
-  <ion-input [(ngModel)] = "conta" class="espacinho"> Conta: </ion-input>
+  <ion-input disabled [(ngModel)] = "resultado" class="espacinho"><strong> Resultado:</strong></ion-input>
+  <ion-input disabled [(ngModel)] = "conta" class="espacinho"><strong>Conta:</strong></ion-input>
 
 </ion-content>
