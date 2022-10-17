@@ -13,7 +13,7 @@
   </ion-item>
   <ion-item>
     <ion-label><span>Resultado: </span></ion-label>
-    <ion-label class="ion-text-right resultado"><span>{{resultado}} </span></ion-label>
+    <ion-label  class="ion-text-right resultado"><span>{{resultado}} </span></ion-label>
   </ion-item>
   <ion-grid>
     <ion-row>
@@ -80,7 +80,7 @@
         <ion-button (click)="adicionarValor('9')" color="medium" expand="block">9</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button (click)="adicionarValor('x')" color="dark" expand="block">
+        <ion-button (click)="adicionarValor('*')" color="dark" expand="block">
           <ion-icon name="close-outline" size="small"></ion-icon>
         </ion-button>
       </ion-col>
@@ -125,7 +125,7 @@
         <ion-button (click)="adicionarValor('.')" color="medium" expand="block">,</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button color="danger" expand="block">
+        <ion-button (click)="realizarOperacao()" color="danger" expand="block">
           <ion-icon name="reorder-two-outline" size="small"></ion-icon>
         </ion-button>
       </ion-col>
