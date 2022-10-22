@@ -30,12 +30,10 @@
         <ion-button color="dark" expand="full">M-</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button color="dark" expand="full">MS</ion-button>
+        <ion-button (click)="salvarMemoria()" color="dark" expand="full">MS</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button color="dark" expand="full"> 
-          M
-          <ion-icon name="caret-down-outline"></ion-icon> 
+        <ion-button (click)="mostrarMemoria()" color="dark" expand="full">M<ion-icon name="caret-down-outline"></ion-icon> 
         </ion-button>
       </ion-col>
     </ion-row>
@@ -116,13 +114,13 @@
         </ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button color="medium" expand="block">+/_</ion-button>
+        <ion-button color="dark" expand="block">+/_</ion-button>
       </ion-col>
       <ion-col size="3">
         <ion-button (click)="adicionarValor('0')" color="medium" expand="block">0</ion-button>
       </ion-col>
       <ion-col size="3">
-        <ion-button (click)="adicionarValor('.')" color="medium" expand="block">,</ion-button>
+        <ion-button (click)="adicionarValor('.')" color="dark" expand="block">,</ion-button>
       </ion-col>
       <ion-col size="3">
         <ion-button (click)="realizarOperacao()" color="danger" expand="block">
