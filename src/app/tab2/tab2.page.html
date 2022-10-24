@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
     <ion-title>
-      Caculadora 2
+      Calculadora 2
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,22 +18,22 @@
   <ion-grid>
     <ion-row>
       <ion-col size="2">
-        <ion-button color="dark" expand="full">MC</ion-button>
+        <ion-button (click)="esvaziarMemoria()" color="dark" expand="full">MC</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button color="dark" expand="full">MR</ion-button>
+        <ion-button  (click)="mostrarUltimaMemoria()" color="dark" expand="full">MR</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button color="dark" expand="full">M+</ion-button>
+        <ion-button (click)="adicaoMemoria()" color="dark" expand="full">M+</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button color="dark" expand="full">M-</ion-button>
+        <ion-button (click)="subMemoria()"color="dark" expand="full">M-</ion-button>
       </ion-col>
       <ion-col size="2">
         <ion-button (click)="salvarMemoria()" color="dark" expand="full">MS</ion-button>
       </ion-col>
       <ion-col size="2">
-        <ion-button (click)="mostrarMemoria()" color="dark" expand="full">M<ion-icon name="caret-down-outline"></ion-icon> 
+        <ion-button (click)="openModal()" color="dark" expand="full">M<ion-icon name="caret-down-outline"></ion-icon> 
         </ion-button>
       </ion-col>
     </ion-row>

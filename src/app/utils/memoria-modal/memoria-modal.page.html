@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon color="dark" name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="start">Historico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full" *ngFor ="let mem of memoria">
+    <ion-label>{{mem.operacao}} = {{mem.resultado}}</ion-label>
+  </ion-item>
+</ion-content>
